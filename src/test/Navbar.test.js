@@ -1,20 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App';
+import Navbar from '../components/Navbar';
 
-test('renders the products link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/products/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test('renders the my cart link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/my cart/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test('renders the logo with a link', () => {
-  render(<App />);
-  const logoElement = screen.getByRole( 'link', { name: 'lemon'} )
-  expect(logoElement).toBeInTheDocument();
+it('should display go to my cart when my cart button is clicked', () => {
+  const mockCart = [ 'Limoncello', 'Arancello' ];
+  render(<Navbar cart={ mockCart }/>);
+  const cartList = screen.getByText('Limoncello');
+  expect(cartList).toBeInTheDocument();
 });
