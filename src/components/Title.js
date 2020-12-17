@@ -1,6 +1,4 @@
-const { FormCheck } = require("react-bootstrap");
-
-import React from 'react'
+import React from 'react';
 
 export default function Title( { name, title }) { //passing 2 props
   return (
