@@ -14,7 +14,7 @@ export default class Navbar extends Component {
         <ul className='navbar-bar align-items-center'>
           <li className='nav-item ml-5'>
             <Link to='/' className='nav-link'>
-              products
+              produtos
             </Link>
           </li>
         </ul>
@@ -22,7 +22,7 @@ export default class Navbar extends Component {
           <ButtonContainer>
             <span className='mr-2'>
               <i className='fas fa-cart-plus' />
-              my cart
+              meu carrinho
             </span>
           </ButtonContainer>
         </Link>
@@ -36,6 +36,6 @@ const NavWrapper = styled.nav`
   .nav-link {
     color: var(--mainBlack) !important;
     font-size: 2.3rem;
-    text-transform: capitalize;
+    text-transform: capitalize;Up
   }
 `

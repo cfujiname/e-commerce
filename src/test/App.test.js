@@ -3,19 +3,19 @@ import App from '../App';
 
 test('renders the full app', () => {
   render(<App />);
-  const routeElement = screen.getByText(/products/i);
+  const routeElement = screen.getByText('Limoncello');
   expect(routeElement).toBeInTheDocument();
 });
 
 test('renders the products link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/products/i);
+  const linkElement = screen.getByRole( 'link', { name: 'produtos' } );
   expect(linkElement).toBeInTheDocument();
 });
 
 test('renders the my cart link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/my cart/i);
+  const linkElement = screen.getByRole( 'link', { name: 'meu carrinho' } );
   expect(linkElement).toBeInTheDocument();
 });
 

@@ -14,6 +14,7 @@ class App extends Component {
     return (
     <Router>
       <React.Fragment>
+        <h1>Limoncello</h1>
         <Navbar />
           <Switch>
             <Route exact path='/' component={ ProductList } />
