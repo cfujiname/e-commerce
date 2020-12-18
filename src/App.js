@@ -14,7 +14,10 @@ class App extends Component {
     return (
     <Router>
       <React.Fragment>
-        <h1>Limoncello</h1>
+      <div
+      style={{
+         backgroundImage: `url("/img/background.jpg")`, backgroundRepeat: 'no-repeat', width:'100vw', height:'100vw', color:'white', size: 'cover'
+      }}>            
         <Navbar />
           <Switch>
             <Route exact path='/' component={ ProductList } />
@@ -22,6 +25,7 @@ class App extends Component {
             <Route path='/cart' component={ Cart } />
             <Route component={ Error } />
           </Switch>
+          </div>
       </React.Fragment>
     </Router>
     );

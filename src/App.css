@@ -1,18 +1,20 @@
+
 :root {
   --mainWhite: white;
   --mainGrey: lightgrey;
   --mainBlack: black;
+  --darkGrey: #555555;
 }
 
 body {
-  font-family: 'Reenie Beanie', cursive !important;
+  font-family: 'Lato', sans-serif !important;
   font-size: 30px !important;
-  background: var(--mainWhite) !important;
-  color: var(--mainBlack) !important;
+  background: transparent !important;
+  color: var(--darkGrey) !important;
 }
 
 .text-title {
-  font-family: 'Reenie Beanie', cursive;
+  font-family: 'Lato', sans-serif;
 }
 
 .text-black {
@@ -20,5 +22,5 @@ body {
 }
 
 .text-grey {
-  color: var(--mainGrey);
+  color: var(--darkGrey);
 }
