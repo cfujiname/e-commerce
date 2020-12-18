@@ -16,7 +16,7 @@ class App extends Component {
       <React.Fragment>
       <div
       style={{
-         backgroundImage: `url("/img/background.jpg")`, backgroundRepeat: 'no-repeat', width:'100vw', height:'100vw', color:'white', size: 'cover'
+         backgroundImage: `url("/img/background.jpg")`, backgroundRepeat: 'no-repeat', width:'100vw', height:'100vh', color:'white', size: 'cover'
       }}>            
         <Navbar />
           <Switch>

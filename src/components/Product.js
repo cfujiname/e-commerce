@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import { ProductConsumer } from '../context';
+import PropTypes from 'prop-types';
 
 export default class Product extends Component {
   render() {
@@ -17,9 +18,13 @@ export default class Product extends Component {
 
             <button className='cart-btn' 
               disabled={ inCart ? true : false } 
-              onClick={ () => {console.log('added to cart')}} >
-              { inCart ? (<p className='text-capitalize mb-0' disabled>Já está no carrinho!</p>) : 
-                (<i className='fas fa-cart-plus' />) }
+              onClick={ () => {console.log('added to cart')}} 
+              >
+              { inCart ? (<p className='mb-0' disabled>
+                {" "}
+                já está na sua cesta</p>
+                ) : (
+                <i className='fas fa-cart-plus' />) }
             </button>
 
           </div>
@@ -42,6 +47,16 @@ export default class Product extends Component {
   }
 }
 
+Product.propTypes = {
+  product:PropTypes.shape({
+    id: PropTypes.number,
+    img: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    inCart: PropTypes.bool
+  }).isRequired 
+}
+
 const ProductWrapper = styled.div`
   .card {
     border-color: transparent; 
@@ -53,6 +68,7 @@ const ProductWrapper = styled.div`
     background: transparent;
     border-top: transparent;
     transition: all 0.3s linear;
+    color: var(--darkGrey);
   }
 
   &:hover {
@@ -61,7 +77,7 @@ const ProductWrapper = styled.div`
     }
     
     .card-footer {
-      background: rgba(247, 247, 247);
+      background: transparent;
     }
   }
 

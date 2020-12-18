@@ -24,3 +24,10 @@ body {
 .text-grey {
   color: var(--darkGrey);
 }
+
+#img.source-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

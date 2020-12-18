@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import logo from '../logo.JPG';
-import cart from '../cart.png';
+// import cart from '../cart.png';
 import styled from 'styled-components';
 import { ButtonContainer } from './Button';
 
@@ -22,7 +22,7 @@ export default class Navbar extends Component {
         <Link to='/cart' className='ml-auto'>
           <ButtonContainer>
             <span className='mr-2'>
-              <img src={ cart } alt='carrinho' width='50px' />
+              {/* <img src={ cart } alt='carrinho' width='50px' /> */}
               minha cesta
             </span>
           </ButtonContainer>
@@ -35,8 +35,7 @@ export default class Navbar extends Component {
 const NavWrapper = styled.nav`
   background: transparent ;
   .nav-link {
-    color: var(--mainBlack) !important;
+    color: var(--darkGrey) !important;
     font-size: 2.3rem;
-    text-transform: capitalize;
   }
 `
