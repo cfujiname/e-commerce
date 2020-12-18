@@ -15,7 +15,7 @@ export default class Navbar extends Component {
         <ul className='navbar-bar align-items-center'>
           <li className='nav-item ml-5'>
             <Link to='/' className='nav-link'>
-              produtos
+              limoncello
             </Link>
           </li>
         </ul>
@@ -36,6 +36,7 @@ const NavWrapper = styled.nav`
   background: transparent ;
   .nav-link {
     color: var(--darkGrey) !important;
-    font-size: 2.3rem;
+    font-size: 2rem;
+    margin: auto;
   }
 `

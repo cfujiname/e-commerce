@@ -7,6 +7,10 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Error from './components/Error';
+import Sidebar from './Sidebar';
+import FirstPage from './components/FirstPage';
+import About from './components/About';
+
 
 
 class App extends Component {
@@ -14,18 +18,23 @@ class App extends Component {
     return (
     <Router>
       <React.Fragment>
-      <div
-      style={{
-         backgroundImage: `url("/img/background.jpg")`, backgroundRepeat: 'no-repeat', width:'100vw', height:'100vh', color:'white', size: 'cover'
-      }}>            
-        <Navbar />
-          <Switch>
-            <Route exact path='/' component={ ProductList } />
-            <Route path='/details' component={ Details } />
-            <Route path='/cart' component={ Cart } />
-            <Route component={ Error } />
-          </Switch>
-          </div>
+        <div className="App" id="outer-container">
+          <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+
+            <div id="page-wrap">
+              <Navbar />
+              <Switch>
+                <Route exact path='/' component={ FirstPage } />
+                <Route path='/products' component={ ProductList } />
+                <Route path='/details' component={ Details } />
+                <Route path='/cart' component={ Cart } />
+                <Route path='/about' component={ About } />
+                <Route component={ Error } />
+              </Switch>
+              
+            </div>
+        </div>
+          {/* </div> */}
       </React.Fragment>
     </Router>
     );
