@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
 export const ButtonContainer = styled.button`
-  font-size: 2rem;
   background: transparent;
   border: transparent;
-  color: var(--darkGrey);
-  padding: 0rem 0.5rem;
   cursor: pointer;
-  margin: -1.3rem 0.5rem 0 0;
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    background: var(--mainWhite);
-    color: var(--darkGrey);
-  }
-  &:focus {
-    outline: none;
-  }
+  margin-top: -1.3rem;
+  margin-right: 0rem;
+  margin-left: 0rem;
+`
+
+export const ButtonMain = styled.button`
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 0rem;
 `
