@@ -25,8 +25,7 @@ var styles = {
     position: 'fixed',
     width: '36px',
     height: '30px',
-    left: '36px',
-    top: '36px'
+    margin: '3.3rem 3rem 0rem 3rem',
   },
   bmBurgerBars: {
     background: '#373a47',
