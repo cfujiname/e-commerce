@@ -1,39 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import logo from '../logo.JPG';
+import MainWord from '../MainWord.jpg';
 import cart from '../cart.svg';
 import styled from 'styled-components';
-import { ButtonContainer } from './Button';
+import { ButtonCart, ButtonMain } from './Button';
 
 export default class Navbar extends Component {
   render() {
     return (
-      <NavWrapper className='navbar navbar-expand-sm navbar-dark px-sm-5'>
-        <div class="container">
-          <div class="row justify-content-start"></div>
-              <ul className='align-items-center'>
-                <li className='nav-item ml-5'>
+      <NavWrapper className='navbar navbar-expand-lg px-sm-5'>
+        {/* <ul className='align-items-center'> */}
+          {/* <li className='nav-item ml-5'> */}
            
-                  {/* <div class='col'></div> */}
-                    <div class='col'>
-                      <Link to='/' className='nav-link'>
-                       limoncello
-                      </Link>
-                    </div>
-                </li>
-              </ul>
-          </div>
-          
-       
-        <div class='col'>
+          <Link to='/' className='m-auto' >
+            <ButtonMain>
+                <img src={ MainWord } alt='carrinho' width='200px' />
+            </ButtonMain>
+          </Link>
+          {/* </li> */}
+        {/* </ul>           */}
           <Link to='/cart' className='ml-auto'>
-            <ButtonContainer>
-              <span className='mr-2'>
+            <ButtonCart>
+              <span className='mr-0'>
                 <img src={ cart } alt='carrinho' width='50px' />
               </span>
-            </ButtonContainer>
+            </ButtonCart>
           </Link>
-        </div>
       </NavWrapper>
     )
   }
