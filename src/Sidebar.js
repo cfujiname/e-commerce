@@ -1,5 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import { withTheme } from 'styled-components';
 
 export default props => {
   return (
@@ -50,12 +51,16 @@ var styles = {
 
   bmItem: {
     color: 'var(--mainGrey)',
-    marginTop: '10px'
+    marginTop: '10px',
+    "&:hover": {
+      color: 'white',
+      textDecoration: 'none',
+    }
   },
 
   bmItemList: {
     color: '#444444',
-    padding: '0.8em'
+    padding: '0.8em',
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
