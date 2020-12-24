@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ProductConsumer } from '../context';
 import { ButtonProducts, ButtonCart } from './Button';
 import { Link } from 'react-router-dom';
-import { Button } from 'bootstrap';
+// import { Button } from 'bootstrap';
 
 export default class Details extends Component {
   render() {
@@ -49,7 +49,8 @@ export default class Details extends Component {
                       cart
                       disabled={inCart ? true : false}
                       onClick={() => {
-                      value.addToCart(id)
+                      value.addToCart(id);
+                      value.openModal(id);
                     }}
                     >
                       {inCart ? 'já está na cesta' : 'adicionar à cesta'}

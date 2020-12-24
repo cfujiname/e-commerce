@@ -1,6 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import { withTheme } from 'styled-components';
+// import { withTheme } from 'styled-components';
 
 export default props => {
   return (

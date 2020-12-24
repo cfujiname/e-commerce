@@ -10,6 +10,7 @@ import Error from './components/Error';
 import Sidebar from './Sidebar';
 import FirstPage from './components/FirstPage';
 import About from './components/About';
+import Modal from './components/Modal';
 
 
 
@@ -34,6 +35,7 @@ class App extends Component {
               
             </div>
         </div>
+        <Modal />
       </React.Fragment>
     </Router>
     );
