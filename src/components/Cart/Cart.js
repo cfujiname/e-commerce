@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Title from '../Title';
+import CartColumns from './CartColumns';
+
 
 export default class Cart extends Component {
   render() {
     return (
-      <div>
-        <h3>this is cart</h3>
-      </div>
+      <section>
+        <Title name='your' title='cart' />
+        <CartColumns />
+      </section>
     )
   }
 }
